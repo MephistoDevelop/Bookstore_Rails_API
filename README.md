@@ -23,7 +23,11 @@ Things you may want to cover:
 
 * ...
 
+afer deploy to heroku run:
+
+$> heroku run rake db:migrate -a heroku_deployed_name
+$> heroku pg:reset -a heroku_deployed_name
 
 Usefull comands to get Response from REST API to run in terminal:
 
- $> curl -i -H "Content-Type:application/json" -X POST http://localhost:3000/users -d '{"name":"MephistoDevelop","email":"inesherald@gmail.com"}'
+  curl --request POST "https://mephistodevelop-bookstore-api.herokuapp.com/books" --header 'Content-Type: application/json' --data-raw  { "id":"1","author": "Test article content 1","title": "Test article title 1","category": "test-article-slug-1","read_percent":"60"}
