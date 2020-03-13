@@ -20,7 +20,11 @@ class BooksController < ApplicationController
     end
   end
 
+  def destroy
+    Book.destroy(params[:id])
+  end
+
   def books_params
-    params.require(:book).permit(:title, :category, :author,:read_percent)
+    params.require(:book).permit(:title, :category, :author, :read_percent)
   end
 end

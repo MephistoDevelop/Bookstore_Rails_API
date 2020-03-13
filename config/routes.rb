@@ -2,5 +2,5 @@
 
 Rails.application.routes.draw do
   resources :users
-  resources :books, only: %i[index create show delete]
+  resources :books, only: %i[index create show destroy]
 end
