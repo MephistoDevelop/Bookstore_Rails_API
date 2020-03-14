@@ -4,7 +4,7 @@ class CreateBooks < ActiveRecord::Migration[6.0]
       t.string :title
       t.string :category
       t.string :author
-      t.string :read_percent
+      t.string :readProgress
     end
   end
 end

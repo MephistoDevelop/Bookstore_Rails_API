@@ -12,7 +12,7 @@ class BooksController < ApplicationController
 
   def create
     @books = Book.new(books_params)
-
+    puts books_params
     if @books.save
       render json: @books, status: :created, location: @books
     else
@@ -25,6 +25,6 @@ class BooksController < ApplicationController
   end
 
   def books_params
-    params.require(:book).permit(:title, :category, :author, :read_percent)
+    params.require(:book).permit(:title, :category, :author, :urlImage, :userId, :id, :readProgress)
   end
 end
